@@ -10,7 +10,11 @@ Several community translations are also available.
 
 This text is available in paperback and ebook format from No Starch Press.
 
+---
+
 ### This is a repo to track my progress while I learn Rust
+
+---
 
 > Different branches in this repo contains my practice
 
