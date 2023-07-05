@@ -10,9 +10,9 @@ Several community translations are also available.
 
 This text is available in paperback and ebook format from No Starch Press.
 
-This is a repo to track my progress with The Book by Rust Foundation while I learn Rust
+### This is a repo to track my progress while I learn Rust
 
-Different branches in this repo contains my practice
+> Different branches in this repo contains my practice
 
 1. <b>hello_world</b>: Basic rust program, installation, and rustc
 2. <b>hello_cargo</b>: Using cargo(Rust package manager and build system) > cargo build, cargo check, cargo run, and cargo build --release
