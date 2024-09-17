@@ -1,73 +1,50 @@
 pub fn main() {
-    //
+    // ? 1
+    // let middle_name = "Vanilla";
+    // let first_name = String::from("Chukwuemeka");
 
-    // let mut a = String::from("hello");
-    //
-    // let a = 2;
+    // println!(
+    //     "My Middle name is {0} First name is {1}.",
+    //     middle_name, first_name
+    // );
+
     // // {
-    //
-    // // let b = &a;
-    // let b = a.clone();
-    //
-    // println!("{a}");
-    // //
-    // // a.push_str(", Stable");
+    // let mut fullname = String::from(first_name);
+    // fullname.push_str(" Maduekwe");
     // // }
 
-    //
-    // println!("{b}");
-    // {
-    //     let s = "hello";
-    // }
+    // drop(fullname);
 
-    // let mut s = String::from("hello");
-    //
-    // s.push_str(", world!");
-    //
-    // println!("{}", s);
-    //
-    // let default_string = "Hey";
-    //
-    // println!("{default_string}");
+    // println!("Fullname is {}", fullname);
 
-    // let s = String::from("Sample string");
+    // ? 2
+    // let x = 5;
+    // let y = x;
 
-    // takes_ownership_and_return(s);
+    // let s1 = String::from("hello");
+    // let s2 = s1;
 
-    // let x = s;
+    // // drop(s1);
 
-    let mut s = String::from("The hello world");
+    // println!("{}", s2);
 
-    s.clear();
+    // ? 3
+    // let s1 = String::from("hello");
+    // let s2 = s1.clone();
+    // drop(s2);
+    // println!("{}", s1);
 
-    let word = first_word(&s);
+    // ? 4
+    let s1 = String::from("hello");
 
-    s = String::from("Bugs in Rust");
+    let (s2, len) = calculate_length(s1);
 
-    println!("{word}");
-
-    // let hello = &s[0..5];
-
-    // println!("{} world", hello);
+    println!("The length of '{s2}' is {len}.");
+    // println!("{s1}");
 }
 
-fn first_word(s: &String) -> &str {
-    let bytes = s.as_bytes();
+fn calculate_length(s: String) -> (String, usize) {
+    let length = s.len();
 
-    for (i, &item) in bytes.iter().enumerate() {
-        if item == b' ' {
-            return &s[0..i];
-        }
-    }
-
-    &s[..]
+    (s, length)
 }
-//
-//
-// fn takes_ownership_and_return() -> (String, usize) {
-//     // println!("{sm}, sm");
-//
-//     let mut a = String::from("Vanilla 🦀");
-//
-//     (&a, a.len())
-// }
