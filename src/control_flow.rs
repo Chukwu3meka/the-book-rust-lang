@@ -21,6 +21,13 @@ pub fn main() {
         println!("Number is not divisible by 2 or 3")
     }
 
+
+{
+    
+}
+
+
+
     let condition = true;
     number = if condition { 7 } else { 3 };
 

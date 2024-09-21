@@ -94,7 +94,9 @@ pub fn main() {
 
     println!("Enter an Array Index");
 
-    let mut index = String::new();
+    let mut index = {
+        return String::new();
+    };
 
     io::stdin()
         .read_line(&mut index)
