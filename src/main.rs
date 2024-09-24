@@ -1,8 +1,8 @@
-mod references;
+mod slice_type;
 
 fn main() {
     // guessing_game::main();
     // programming_concepts::main();
     // ownership::main();
-    references::main();
+    slice_type::main();
 }

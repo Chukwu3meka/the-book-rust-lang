@@ -1,3 +1,7 @@
+// ? The Rules of References
+// At any given time, you can have either one mutable reference or any number of immutable references.
+// References must always be valid.
+
 pub fn main() {
     // ? Referencing example
     let s1 = String::from("hello");
@@ -27,8 +31,7 @@ pub fn main() {
 
     // ? Combining mutable and immutable reference
 
-
-let first_name = String::from('dgdgfddfd');
+    // let first_name = String::from("dgdgfddfd");
 
     // * You cannot use a mutable ref after using an immutable ref on the same value
     let mut v = String::from("hello");
@@ -40,11 +43,25 @@ let first_name = String::from('dgdgfddfd');
     let v3 = &mut v; // BIG PROBLEM
 
     println!("{}", v3);
+
+    v = String::from("Chukwuemeka");
+    // println!("{}", v3);
+
+    // ? Dangling References
+    // A pointer that references a location iun memory that may have been given to someone else
+
+    let reference_to_nothing = dangle();
 }
 
+fn dangle() -> String {
+    // error code
+    // let s = String::from("hello");
+    // &s
 
-
-
+    // correct code
+    let s = String::from("hello");
+    s
+}
 
 fn change(some_string: &mut String) {
     some_string.push_str(", world");
