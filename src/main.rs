@@ -1,8 +1,8 @@
-mod structs_1;
+mod structs_2;
 
 fn main() {
     // guessing_game::main();
     // programming_concepts::main();
     // ownership::main();
-    structs_1::main();
+    structs_2::main();
 }

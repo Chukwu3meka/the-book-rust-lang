@@ -7,8 +7,8 @@ struct User {
 
 struct User2 {
     active: bool,
-    email: &str,
-    username: &str,
+    // email: &str,
+    // username: &str,
     sign_in_count: u64,
 }
 
@@ -57,8 +57,8 @@ pub fn main() {
 
     let user3 = User2 {
         active: true,
-        username: "someusername123",
-        email: "someone@example.com",
+        // username: "someusername123",
+        // email: "someone@example.com",
         sign_in_count: 1,
     };
 
