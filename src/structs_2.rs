@@ -1,6 +1,8 @@
+#[derive(Debug)] // this will allow us print data with this struct to console
 struct Rectangle {
     width: u32,
     height: u32,
+    name: String,
 }
 
 pub fn main() {
@@ -20,17 +22,27 @@ pub fn main() {
     //     area2(rect1)
     // );
 
-    // ?  refactoring woith structs
+    // ?  refactoring worth structs
 
     let rect2 = Rectangle {
         width: 30,
         height: 50,
+        name: String::from("Test Data"),
     };
 
     println!(
         "The area of the rectangle is {} square pixels",
         area3(&rect2)
-    )
+    );
+
+    println!("1. rect2 is {rect2:?}",);
+    println!("2. rect2 is {rect2:#?}",);
+    println!("3. rect2 is {:?}", rect2);
+
+    // ?dbg! macro taked ownership of the value to be displayed as opposed to println
+
+    dbg!(&rect2);
+    dbg!(&rect2);
 }
 
 fn area(width: u32, height: u32) -> u32 {
